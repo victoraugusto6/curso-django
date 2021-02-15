@@ -1,4 +1,4 @@
 DEBUG = False
 SECRET_KEY = 'defina_sua_chave_secreta'
 ALLOWED_HOSTS = localhost,127.0.0.1
-DATABASE-URL = postgres://postgres:postgres@localhost/testdb
+DATABASE_URL = postgres://postgres:postgres@localhost/testdb

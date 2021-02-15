@@ -8,6 +8,7 @@ env:
   global:
     - PIPENV_VENV_IN_PROJECT=1
     - PIPENV_IGNORE_VIRTUALENVS=1
+    - cp contrib/env-sample .env
 install:
   - pip install pipenv
   - pipenv sync --dev

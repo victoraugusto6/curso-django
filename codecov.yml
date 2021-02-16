@@ -1,0 +1,3 @@
+ignore:
+  - "pypro/base/migrations"
+  - "pypro/base/models.py"

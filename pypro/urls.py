@@ -18,11 +18,9 @@ from django.contrib import admin
 from django.urls import include
 from django.urls import path
 
-from pypro.base.views import home
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home', home, name='home'),
+    path('', include('pypro.base.urls')),
 ]
 
 if settings.DEBUG:  # pragma: no cover

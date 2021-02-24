@@ -4,3 +4,4 @@ ignore:
   - "pypro/base/admin.py"
   - "pypro/aperitivos/views.py"
   - "pypro/aperitivos/tests_video.py"
+  - "pypro/aperitivos/tests_indice.py"

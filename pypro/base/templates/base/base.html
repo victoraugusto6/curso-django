@@ -39,31 +39,7 @@
 
 {% block body %}{% endblock body %}
 
-<footer class="main-footer mt-5 pt-4 text-light">
-
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h3>Entre em Contato</h3>
-                <address>
-                    <a href="tel:+5512992071544" class="text-light">+55 12 99207-1544</a>
-                    <br/>
-                    <a href="mailto:victor.augusto60@gmail.com" class="text-light">victor.augusto60@gmail.com</a>
-                </address>
-            </div>
-        </div>
-    </div>
-
-    <div class="rights pb-4">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    {% now 'Y' %} Python Pro. Todos os direitos reservados.
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+{% include 'base/footer.html' with contato_email='victor.augusto60@gmail.com' only %}
 
 </body>
 </html>

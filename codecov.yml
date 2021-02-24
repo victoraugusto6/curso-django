@@ -2,3 +2,5 @@ ignore:
   - "pypro/base/migrations"
   - "pypro/base/models.py"
   - "pypro/base/admin.py"
+  - "pypro/aperitivos/views.py"
+  - "pypro/aperitivos/tests.py"

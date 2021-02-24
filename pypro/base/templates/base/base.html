@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Python Pro</title>
+    <title>{% block title %}Python Pro{% endblock title %}</title>
 
-    <meta name="description" content="Página do curso Python Pro">
+    <meta name="description" content="{% block description %}Página do curso Python Pro{% endblock description %}">
     <meta name="author" content="Victor Augusto">
 
     <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}"/>
@@ -37,99 +37,7 @@
     </div>
 </nav>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-
-            <div class="jumbotron">
-                <h2>
-                    Curso de Python com Luciano Ramalho
-                </h2>
-                <p>
-                    Confira em breve mais informações sobre o curso que será ministrado pelo autor do livro
-                    <a href="https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/" target="_blank">Python
-                        Fluente</a>
-                </p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card">
-                        <h5 class="card-header">
-                            Matrículas abertas!
-                        </h5>
-                        <div class="card-body">
-
-                            <p>Curso Python Pro disponível.</p>
-                            <p>Valor: R$1.000,00</p>
-
-
-                            <!-- INICIO DO BOTAO PAGSEGURO --><a href="https://pag.ae/7WV8NRFjp/button" target="_blank"
-                                                                 title="Pagar com PagSeguro"><img
-                                src="//assets.pagseguro.com.br/ps-integration-assets/botoes/pagamentos/205x30-pagar.gif"
-                                alt="Pague com PagSeguro - é rápido, grátis e seguro!"/></a>
-                            <!-- FIM DO BOTAO PAGSEGURO -->
-
-                            <!--                            <form action="https://gmail.us1.list-manage.com/subscribe/post?u=71e66ae06fb7403e6b036ffcc&amp;id=4532288671"-->
-                            <!--                                  method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"-->
-                            <!--                                  class="form-row align-items-center" target="_blank" novalidate>-->
-                            <!--                                <div class="form-row align-items-center">-->
-                            <!--                                    <div class="col-sm-3 my-1">-->
-                            <!--                                        <label for="mce-EMAIL" class="form-label">E-mail</label>-->
-                            <!--                                        <input type="email" value="" name="EMAIL" class="required form-control"-->
-                            <!--                                               id="mce-EMAIL" placeholder="email@email.com">-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="col-sm-3 my-1">-->
-                            <!--                                        <label for="mce-FNAME" class="form-label">Nome</label>-->
-                            <!--                                        <div class="input-group">-->
-                            <!--                                            <div class="input-group-prepend">-->
-                            <!--                                            </div>-->
-                            <!--                                            <input type="text" name="FNAME" class="form-control" id="mce-FNAME"-->
-                            <!--                                                   placeholder="Seu nome">-->
-                            <!--                                        </div>-->
-                            <!--                                    </div>-->
-                            <!--                                </div>-->
-                            <!--                                &lt;!&ndash; real people should not fill this in and expect good things - do not remove this or risk form bot signups&ndash;&gt;-->
-                            <!--                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"-->
-                            <!--                                                                                                          name="b_71e66ae06fb7403e6b036ffcc_4532288671"-->
-                            <!--                                                                                                          tabindex="-1"-->
-                            <!--                                                                                                          value="">-->
-                            <!--                                </div>-->
-                            <!--                                <input type="submit" value="Salvar" name="subscribe"-->
-                            <!--                                       id="mc-embedded-subscribe" class="btn btn-primary">-->
-                            <!--                            </form>-->
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <br>
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card">
-                        <h5 class="card-header">
-                            Mais detalhes sobre o instrututor
-                        </h5>
-                        <div class="card-body">
-                            <p class="card-text">
-                                <img src="{% static 'img/luciano-ramalho.png' %}" alt="Foto de Luciano Ramalho"
-                                     class="img-thumbnail float-start me-3" width="150px"/>
-                                Luciano Ramalho é programador Python desde 1998, Fellow da Python Software Foundation; é
-                                sócio do Python.pro.br – uma empresa de treinamento – e cofundador do Garoa Hacker
-                                Clube, o primeiro hackerspace do Brasil. Tem liderado equipes de desenvolvimento de
-                                software e ministrado cursos sobre Python em empresas de mídia, bancos e para o governo
-                                federal.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
+{% block body %}{% endblock body %}
 
 <footer class="main-footer mt-5 pt-4 text-light">
 

@@ -5,7 +5,7 @@ from pypro.modulos.models import Modulo
 
 def listar_modulos_ordenados() -> List[Modulo]:
     """
-    Lista módulos ordenados por títulos
+    Lista módulos ordenados por parâmetro order
     :return:
     """
 

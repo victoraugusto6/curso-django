@@ -3,6 +3,6 @@ ignore:
   - "pypro/base/models.py"
   - "pypro/base/admin.py"
   - "pypro/aperitivos/views.py"
-  - "pypro/aperitivos/tests/tests_video.py"
-  - "pypro/aperitivos/tests/tests_indice.py"
+  - "pypro/aperitivos/tests/test_video.py"
+  - "pypro/aperitivos/tests/test_indice.py"
   - "pypro/aperitivos/models.py"

@@ -30,6 +30,19 @@
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                Módulos
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                {% for modulo in MODULOS %}
+                    <li><a class="dropdown-item" href="#">{{ modulo.titulo }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             </ul>

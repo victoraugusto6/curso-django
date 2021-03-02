@@ -25,7 +25,7 @@ urlpatterns = [
     path('modulos/', include('pypro.modulos.urls')),
 ]
 
-if settings.DEBUG:  # pragma: no cover
+if settings.DEBUG:
     import debug_toolbar
 
     urlpatterns.append(

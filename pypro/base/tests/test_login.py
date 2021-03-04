@@ -2,6 +2,8 @@ import pytest
 from django.urls import reverse
 from model_mommy import mommy
 
+from pypro.django_assertions import assert_contains
+
 
 @pytest.fixture
 def resp(client, db):
@@ -30,3 +32,16 @@ def resp_post(client, usuario):
 def test_login_redirect(resp_post):
     assert resp_post.status_code == 302
     assert resp_post.url == reverse('modulos:indice')
+
+
+@pytest.fixture
+def resp_home(client, db):
+    return client.get(reverse('base:home'))
+
+
+def test_botao_entrar_disponivel(resp_home):
+    assert_contains(resp_home, 'Entrar')
+
+
+def test_link_de_login_disponivel(resp_home):
+    assert_contains(resp_home, reverse('login'))

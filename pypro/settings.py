@@ -39,22 +39,6 @@ LOGIN_URL = '/contas/login/'
 LOGIN_REDIRECT_URL = '/modulos/'
 LOGOUT_REDIRECT_URL = '/'
 
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'collectfast',
-    'django.contrib.staticfiles',
-    'pypro.base',
-    'pypro.aperitivos',
-    'pypro.modulos',
-    'pypro.turmas',
-    'ordered_model',
-    'django_extensions',
-]
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -84,6 +68,21 @@ TEMPLATES = [
     },
 ]
 
+INSTALLED_APPS = [
+    'pypro.base',
+    'pypro.aperitivos',
+    'pypro.modulos',
+    'pypro.turmas',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'collectfast',
+    'django.contrib.staticfiles',
+    'ordered_model',
+    'django_extensions',
+]
 WSGI_APPLICATION = 'pypro.wsgi.application'
 
 # Configuração Django Debug Toolbar

@@ -1,0 +1,41 @@
+name: Test
+
+on: [ push ]
+
+jobs:
+  build:
+    env:
+      PIPENVS_NO_INHERIT: 1
+      PIPENV_IGNORE_VIRTUALENVS: 1
+      SECRET_KEY: 'test'
+      DEBUG: True
+      ALLOWED_HOSTS: localhost,127.0.0.1
+      AWS_ACCESS_KEY_ID: test1
+      AWS_SECRET_ACCESS_KEY: test2
+      AWS_STORAGE_BUCKET_NAME: test3
+      EMAIL_BACKEND: django.core.mail.backends.console.EmailBackend
+      EMAIL_HOST: localhost
+      EMAIL_PORT: 587
+      EMAIL_HOST_USER:
+      EMAIL_HOST_PASSWORD:
+      EMAIL_USE_TLS: True
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.9
+          architecture: x64
+      - name: Instalar dependências
+        run: |
+          pip install pipenv
+          pipenv sync --dev
+      - name: Rodar flake8
+        uses: py-actions/flake8@v1
+        with:
+          checkName: 'flake8_py3'   # NOTE: this needs to be the same as the job name
+      - name: Rodar Testes Automáticos
+        run: |
+          pipenv run pytest

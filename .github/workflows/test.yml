@@ -25,6 +25,6 @@ jobs:
         uses: py-actions/flake8@v1
         with:
           checkName: 'flake8_py3'   # NOTE: this needs to be the same as the job name
-#      - name: Rodar Testes Automáticos
-#        run: |
-#          pipenv run pytest
+      - name: Rodar Testes Automáticos
+        run: |
+          pipenv run pytest

@@ -20,9 +20,9 @@ boto3==1.17.93 \
     # via
     #   -r requirements.txt
     #   django-s3-folder-storage
-botocore==1.20.93 \
-    --hash=sha256:47b8cea6213490866f34fb31ab30f04c2d7cf188c7ab9714556f0e8f7926ebc4 \
-    --hash=sha256:aae0f08627ef411a9579ae2a588a15f0859b2b40cecd5cde6055f0354712dd6f
+botocore==1.20.95 \
+    --hash=sha256:240a9ef007292e986a4e11662f9038435d9d4fd242e083db160c86eb5c24af30 \
+    --hash=sha256:dc215f59735a3abde6c66a61f43f10d95bc18754d310da4e2037b3b8c4d8aa2d
     # via
     #   -r requirements.txt
     #   boto3

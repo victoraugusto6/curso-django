@@ -17,7 +17,7 @@ def aulas(modulo):
 
 
 @pytest.fixture
-def resp(client, modulo, aula):
+def resp(client, modulo, aulas):
     resp = client.get(reverse('modulos:detalhe', kwargs={'slug': modulo.slug}))
     return resp
 
@@ -34,11 +34,11 @@ def test_publico(resp, modulo: Modulo):
     assert_contains(resp, modulo.publico)
 
 
-def test_aulas_titulos(resp, aula):
-    for aula in aula:
+def test_aulas_titulos(resp, aulas):
+    for aula in aulas:
         assert_contains(resp, aula.titulo)
 
 
-def test_aulas_links(resp, aula):
-    for aula in aula:
+def test_aulas_links(resp, aulas):
+    for aula in aulas:
         assert_contains(resp, aula.get_absolute_url())

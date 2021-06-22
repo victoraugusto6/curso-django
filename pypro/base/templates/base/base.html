@@ -39,7 +39,8 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                         {% for modulo in MODULOS %}
-                            <li><a class="dropdown-item" href="#">{{ modulo.titulo }}</a></li>
+                            <li><a class="dropdown-item" href="{{ modulo.get_absolute_url }}">{{ modulo.titulo }}</a>
+                            </li>
                         {% endfor %}
                     </ul>
                 </li>

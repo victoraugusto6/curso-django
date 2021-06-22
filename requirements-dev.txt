@@ -110,6 +110,10 @@ django-debug-toolbar==3.2.1 \
     --hash=sha256:a5ff2a54f24bf88286f9872836081078f4baa843dc3735ee88524e89f8821e33 \
     --hash=sha256:e759e63e3fe2d3110e0e519639c166816368701eab4a47fed75d7de7018467b9
     # via -r requirements.txt
+django-ordered-model==3.4.3 \
+    --hash=sha256:3a8a0259bfd73a0c0b124932bb1fe59a6d2f4cbea096b20634d2a2d1f5d585cc \
+    --hash=sha256:5aa58277b81b4ca93fb18caf15069af604bac5c5146d2c29aae56da07a86ef1b
+    # via -r requirements.txt
 django-s3-folder-storage==0.5 \
     --hash=sha256:eb5fd3994726f5b87ddc0ea1a6f1af3f598f9d743127c27d6dae111d18a79abe
     # via -r requirements.txt

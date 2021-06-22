@@ -38,6 +38,7 @@ AUTH_USER_MODEL = 'base.User'
 INSTALLED_APPS = [
     'pypro.base',
     'pypro.aperitivos',
+    'pypro.modulos',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

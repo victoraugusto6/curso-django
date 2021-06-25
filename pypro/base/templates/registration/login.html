@@ -9,15 +9,15 @@
             <div class="col">
 
                 {% if form.errors %}
-                    <p>Your username and password didn't match. Please try again.</p>
+                    <p>Seu nome de usuário e senha não coincidem. Por favor, tente novamente.</p>
                 {% endif %}
 
                 {% if next %}
                     {% if user.is_authenticated %}
-                        <p>Your account doesn't have access to this page. To proceed,
-                            please login with an account that has access.</p>
+                        <p>Sua conta não tem acesso a esta página. Para continuar, faça login com uma conta que tenha
+                            acesso.</p>
                     {% else %}
-                        <p>Please login to see this page.</p>
+                        <p>Faça login para ver esta página.</p>
                     {% endif %}
                 {% endif %}
 

@@ -45,7 +45,10 @@
                     </ul>
                 </li>
             </ul>
-            <a class="btn btn-light" href="{% url 'login' %}">Entrar</a>
+            {% if user.is_authenticated %}
+            {% else %}
+                <a class="btn btn-light" href="{% url 'login' %}">Entrar</a>
+            {% endif %}
         </div>
     </div>
 </nav>

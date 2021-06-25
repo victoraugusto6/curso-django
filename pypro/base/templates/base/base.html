@@ -54,7 +54,9 @@
                             {{ user.first_name }}
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <button type="button" class="dropdown-item">Sair</button>
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                                <a class="btn btn-danger" href="{% url 'logout' %}">Sair</a>
+                            </div>
                         </ul>
                     </li>
                 </ul>

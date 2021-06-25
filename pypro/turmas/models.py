@@ -21,3 +21,6 @@ class Matricula(models.Model):
     class Meta:
         unique_together = [['usuario', 'turma']]
         ordering = ['turma', 'data']
+
+    def __str__(self):
+        return str(self.usuario.first_name)

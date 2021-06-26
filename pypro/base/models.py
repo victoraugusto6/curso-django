@@ -37,6 +37,14 @@ class UserManager(BaseUserManager):
 
         return self._create_user(email, password, **extra_fields)
 
+    def get_by_natural_key(self, username):
+        return super().get_by_natural_key(username.lower())
+
+    @classmethod
+    def normalize_email(cls, email):
+        email = super().normalize_email(email)
+        return email.lower()
+
 
 class User(AbstractBaseUser, PermissionsMixin):
     """
@@ -90,3 +98,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     def email_user(self, subject, message, from_email=None, **kwargs):
         """Send an email to this user."""
         send_mail(subject, message, from_email, [self.email], **kwargs)
+
+    def save(self, *args, **kwargs):
+        self.clean()
+        super().save(*args, **kwargs)

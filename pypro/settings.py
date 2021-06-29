@@ -37,6 +37,18 @@ LOGIN_URL = '/contas/login/'
 LOGIN_REDIRECT_URL = '/modulos/'
 LOGOUT_REDIRECT_URL = '/'
 
+# Social Auth
+# SOCIAL_AUTH_POSTGRES_JSONFIELD = True
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'social_core.backends.google.GoogleOAuth2',
+)
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = config('SOCIAL_AUTH_GOOGLE_OAUTH2_KEY')
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = config('SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET')
+
 # Configurações - Email
 EMAIL_BACKEND = config('EMAIL_BACKEND')
 EMAIL_HOST = config('EMAIL_HOST')
@@ -61,6 +73,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ordered_model',
     'django_extensions',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -87,6 +100,10 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'pypro.modulos.context_processors.listar_modulos',
+
+                # Social_Auth_Templates
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },

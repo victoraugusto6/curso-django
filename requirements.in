@@ -10,3 +10,4 @@ sentry-sdk
 django-ordered-model
 ipython
 django-extensions
+social-auth-app-django

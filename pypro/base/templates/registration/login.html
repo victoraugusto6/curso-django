@@ -25,7 +25,7 @@
                     {% csrf_token %}
                     <table>
                         <tr>
-                            <td>{{ form.username.label_tag }}</td>
+                            <td> {{ form.username.label_tag }}</td>
                             <td>{{ form.username }}</td>
                         </tr>
                         <tr>
@@ -36,6 +36,19 @@
 
                     <input class="btn btn-primary" type="submit" value="login">
                     <input type="hidden" name="next" value="{{ next }}">
+
+                    <div class="row mt-2">
+                        <div class="col-md-3">
+                            <a class="btn btn-outline-dark" href="{% url "social:begin" "google-oauth2" %}"
+                               role="button"
+                               style="text-transform:none">
+                                <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Login com Google"
+                                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"/>
+                                Login com Google
+                            </a>
+                        </div>
+                    </div>
+
                 </form>
 
                 {# Assumes you setup the password_reset view in your URLconf #}

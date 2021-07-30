@@ -20,7 +20,7 @@ certifi==2021.5.30
     #   sentry-sdk
 cffi==1.14.6
     # via cryptography
-charset-normalizer==2.0.3
+charset-normalizer==2.0.4
     # via requests
 collectfast==2.2.0
     # via -r requirements.in

@@ -99,9 +99,10 @@ chardet==4.0.0 \
     # via
     #   -r requirements.txt
     #   requests
-codecov==2.1.11 \
-    --hash=sha256:6cde272454009d27355f9434f4e49f238c0273b216beda8472a65dc4957f473b \
-    --hash=sha256:ba8553a82942ce37d4da92b70ffd6d54cf635fc1793ab0a7dc3fecd6ebfb3df8
+codecov==2.1.12 \
+    --hash=sha256:585dc217dc3d8185198ceb402f85d5cb5dbfa0c5f350a5abcdf9e347776a5b47 \
+    --hash=sha256:782a8e5352f22593cbc5427a35320b99490eb24d9dcfa2155fd99d2b75cfb635 \
+    --hash=sha256:a0da46bb5025426da895af90938def8ee12d37fcbcbbbc15b6dc64cf7ebc51c1
     # via -r requirements-dev.in
 collectfast==2.2.0 \
     --hash=sha256:2f6abc8cab7ec5114a7a9a3660ab629ec142556957220aa82857dc9b4381490d \

@@ -113,7 +113,7 @@ six==1.16.0
     # via
     #   python-dateutil
     #   social-auth-app-django
-social-auth-app-django==4.0.0
+social-auth-app-django==5.0.0
     # via -r requirements.in
 social-auth-core==4.1.0
     # via social-auth-app-django

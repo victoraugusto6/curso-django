@@ -87,7 +87,7 @@ ptyprocess==0.7.0
     # via pexpect
 pycparser==2.20
     # via cffi
-pygments==2.9.0
+pygments==2.10.0
     # via ipython
 pyjwt==2.1.0
     # via social-auth-core

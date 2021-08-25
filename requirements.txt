@@ -24,7 +24,7 @@ charset-normalizer==2.0.3
     # via requests
 collectfast==2.2.0
     # via -r requirements.in
-cryptography==3.4.7
+cryptography==3.4.8
     # via social-auth-core
 decorator==5.0.9
     # via ipython

@@ -196,9 +196,9 @@ dj-database-url==0.5.0 \
     --hash=sha256:4aeaeb1f573c74835b0686a2b46b85990571159ffc21aa57ecd4d1e1cb334163 \
     --hash=sha256:851785365761ebe4994a921b433062309eb882fedd318e1b0fcecc607ed02da9
     # via -r requirements.txt
-django==3.2.4 \
-    --hash=sha256:66c9d8db8cc6fe938a28b7887c1596e42d522e27618562517cc8929eb7e7f296 \
-    --hash=sha256:ea735cbbbb3b2fba6d4da4784a0043d84c67c92f1fdf15ad6db69900e792c10f
+django==3.2.7 \
+    --hash=sha256:95b318319d6997bac3595517101ad9cc83fe5672ac498ba48d1a410f47afecd2 \
+    --hash=sha256:e93c93565005b37ddebf2396b4dc4b6913c1838baa82efdfb79acedd5816c240
     # via
     #   -r requirements.txt
     #   collectfast

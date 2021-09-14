@@ -20,9 +20,9 @@ backcall==0.2.0 \
     # via
     #   -r requirements.txt
     #   ipython
-boto3==1.18.37 \
-    --hash=sha256:7a5184027b26d4588218bc5eb18f77e3660cabd87225834531496b643f4ed755 \
-    --hash=sha256:f229cec4450086a16d263b1645cf24920565ca32a841c483dbadc16c2fe6fb5b
+boto3==1.18.41 \
+    --hash=sha256:44f73009506dba227e0d421e4fc44a863d8ff315aaa47d9a7be6c549a6a88a12 \
+    --hash=sha256:aaa6ba286d92fb03f27dd619220c6c1de2c010f39cac7afa72f505f073a31db1
     # via
     #   -r requirements.txt
     #   django-s3-folder-storage

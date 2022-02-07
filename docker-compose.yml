@@ -2,7 +2,7 @@ version: "3.3"
 
 services:
   database:
-    container_name: cursodjango_database
+    container_name: database-python-pro
     image: postgres
     restart: always
     volumes:

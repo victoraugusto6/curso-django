@@ -11,3 +11,4 @@ django-ordered-model
 ipython
 django-extensions
 social-auth-app-django
+scout-apm

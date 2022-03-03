@@ -62,6 +62,7 @@ DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 # Application definition
 
 INSTALLED_APPS = [
+    'scout_apm.django',
     'pypro.base',
     'pypro.aperitivos',
     'pypro.modulos',
@@ -221,3 +222,12 @@ if SENTRY_DSN:
         dsn=SENTRY_DSN,
         integrations=[DjangoIntegration()],
     )
+
+# Scout APM
+SCOUT_KEY = config("SCOUT_KEY", default=None)
+if SCOUT_KEY:
+    SCOUT_MONITOR = config("SCOUT_MONITOR")
+    SCOUT_KEY = config("SCOUT_KEY")
+    SCOUT_NAME = config("SCOUT_NAME")
+    # If you'd like to utilize Error Monitoring:
+    SCOUT_ERRORS_ENABLED = True

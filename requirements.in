@@ -12,3 +12,4 @@ ipython
 django-extensions
 social-auth-app-django
 scout-apm
+newrelic

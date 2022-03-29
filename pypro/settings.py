@@ -231,3 +231,6 @@ if SCOUT_KEY:
     SCOUT_NAME = config("SCOUT_NAME")
     # If you'd like to utilize Error Monitoring:
     SCOUT_ERRORS_ENABLED = True
+
+# shell_plus - features
+SHELL_PLUS_PRE_IMPORTS = [('pypro.extra_imports', '*')]

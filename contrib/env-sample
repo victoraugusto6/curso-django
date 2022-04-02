@@ -10,7 +10,7 @@ AWS_STORAGE_BUCKET_NAME=
 
 INTERNAL_IPS=127.0.0.1
 
-SENTRY_DSN=''
+SENTRY_DSN=
 
 # Configuração - Email
 EMAIL_BACKEND=django.core.mail.backends.console.EmailBackend

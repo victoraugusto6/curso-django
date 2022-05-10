@@ -16,10 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('contas/', include('django.contrib.auth.urls')),
+    path('contas/login/', auth_views.LoginView.as_view(redirect_authenticated_user=True), name='login'),
+    path('contas/logout/', auth_views.LoginView.as_view(redirect_authenticated_user=True), name='logout'),
+    path('contas/password_reset/', auth_views.LoginView.as_view(redirect_authenticated_user=True),
+         name='password_reset'),
     path('', include('social_django.urls', namespace='social')),
     path('', include('pypro.base.urls')),
     path('aperitivos/', include('pypro.aperitivos.urls')),

@@ -79,3 +79,13 @@ def resp_login_com_usuario_logado(client_com_usuario_logado, db):
 
 def test_redirect_login_usuario_logado(resp_login_com_usuario_logado):
     assert resp_login_com_usuario_logado.status_code == 302
+
+
+@pytest.fixture
+def resp_logout_com_usuario_logado(client_com_usuario_logado, db):
+    return client_com_usuario_logado.get(reverse('logout'))
+
+
+def test_redirect_logout_usuario_logado(resp_logout_com_usuario_logado):
+    assert resp_logout_com_usuario_logado.status_code == 302
+    assert resp_logout_com_usuario_logado.url == reverse('base:home')

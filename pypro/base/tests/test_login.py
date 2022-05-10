@@ -70,3 +70,12 @@ def test_nome_usuario_logado_disponivel(resp_home_com_usuario_logado, usuario_lo
 
 def test_link_logout_disponivel(resp_home_com_usuario_logado):
     assert_contains(resp_home_com_usuario_logado, reverse('logout'))
+
+
+@pytest.fixture
+def resp_login_com_usuario_logado(client_com_usuario_logado, db):
+    return client_com_usuario_logado.get(reverse('login'))
+
+
+def test_redirect_login_usuario_logado(resp_login_com_usuario_logado):
+    assert resp_login_com_usuario_logado.status_code == 302

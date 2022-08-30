@@ -4,7 +4,7 @@ Código desenvolvido no módulo de Django do Site [Python Pro](https://pythonpro
 
 [![codecov](https://codecov.io/gh/victoraugusto6/curso-django/branch/main/graph/badge.svg?token=P0IKOKYR5Q)](https://codecov.io/gh/victoraugusto6/curso-django)
 
-Aplicação disponível [aqui](https://curso-django-pythonpro.herokuapp.com/) 
+Aplicação disponível [aqui](https://curso-django-devpro.onrender.com/)
 
 ### <strong>Instruções para instalação</strong>:
 
@@ -23,7 +23,9 @@ Aplicação disponível [aqui](https://curso-django-pythonpro.herokuapp.com/)
 ```pip install -r requirements-dev.txt```
 
 #### Copiar variáveis de ambiente:
+
 ```cp contrib/env-sample .env```
 
 #### Rodar Django:
+
 ```python manage.py runserver```

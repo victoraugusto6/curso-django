@@ -1,7 +1,0 @@
--r requirements.txt
-flake8
-pytest-django
-pytest-cov
-codecov
-model_mommy
-pip-audit

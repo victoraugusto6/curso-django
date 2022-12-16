@@ -10,6 +10,8 @@ asgiref==3.5.2
     #   scout-apm
 asttokens==2.0.8
     # via stack-data
+attrs==22.1.0
+    # via pytest
 backcall==0.2.0
     # via ipython
 boto3==1.24.60
@@ -18,6 +20,8 @@ botocore==1.27.60
     # via
     #   boto3
     #   s3transfer
+cachecontrol[filecache]==0.12.11
+    # via pip-audit
 certifi==2022.6.15
     # via
     #   requests
@@ -27,13 +31,23 @@ cffi==1.15.1
     # via cryptography
 charset-normalizer==2.1.1
     # via requests
+codecov==2.1.12
+    # via -r requirements.in
 collectfast==2.2.0
     # via -r requirements.in
+commonmark==0.9.1
+    # via rich
+coverage[toml]==6.5.0
+    # via
+    #   codecov
+    #   pytest-cov
 cryptography==37.0.4
     # via
     #   pyopenssl
     #   social-auth-core
     #   urllib3
+cyclonedx-python-lib==3.1.1
+    # via pip-audit
 decorator==5.1.1
     # via ipython
 defusedxml==0.7.1
@@ -50,6 +64,7 @@ django==4.1
     #   django-debug-toolbar
     #   django-extensions
     #   django-storages
+    #   model-mommy
 django-debug-toolbar==3.6.0
     # via -r requirements.in
 django-extensions==3.2.0
@@ -62,14 +77,22 @@ django-storages==1.13.1
     # via
     #   collectfast
     #   django-s3-folder-storage
+exceptiongroup==1.0.4
+    # via pytest
 executing==0.10.0
     # via stack-data
+flake8==6.0.0
+    # via -r requirements.in
 gunicorn==20.1.0
     # via -r requirements.in
+html5lib==1.1
+    # via pip-audit
 idna==3.3
     # via
     #   requests
     #   urllib3
+iniconfig==1.1.1
+    # via pytest
 ipython==8.4.0
     # via -r requirements.in
 jedi==0.18.1
@@ -78,20 +101,43 @@ jmespath==1.0.1
     # via
     #   boto3
     #   botocore
+lockfile==0.12.2
+    # via cachecontrol
 matplotlib-inline==0.1.6
     # via ipython
+mccabe==0.7.0
+    # via flake8
+model-mommy==2.0.0
+    # via -r requirements.in
+msgpack==1.0.4
+    # via cachecontrol
 newrelic==8.0.0.179
     # via -r requirements.in
 oauthlib==3.2.0
     # via
     #   requests-oauthlib
     #   social-auth-core
+packageurl-python==0.10.4
+    # via cyclonedx-python-lib
+packaging==21.3
+    # via
+    #   pip-audit
+    #   pip-requirements-parser
+    #   pytest
 parso==0.8.3
     # via jedi
 pexpect==4.8.0
     # via ipython
 pickleshare==0.7.5
     # via ipython
+pip-api==0.0.30
+    # via pip-audit
+pip-audit==2.4.10
+    # via -r requirements.in
+pip-requirements-parser==32.0.0
+    # via pip-audit
+pluggy==1.0.0
+    # via pytest
 prompt-toolkit==3.0.30
     # via ipython
 psutil==5.9.1
@@ -102,14 +148,30 @@ ptyprocess==0.7.0
     # via pexpect
 pure-eval==0.2.2
     # via stack-data
+pycodestyle==2.10.0
+    # via flake8
 pycparser==2.21
     # via cffi
+pyflakes==3.0.1
+    # via flake8
 pygments==2.13.0
-    # via ipython
+    # via
+    #   ipython
+    #   rich
 pyjwt==2.4.0
     # via social-auth-core
 pyopenssl==22.0.0
     # via urllib3
+pyparsing==3.0.9
+    # via packaging
+pytest==7.2.0
+    # via
+    #   pytest-cov
+    #   pytest-django
+pytest-cov==4.0.0
+    # via -r requirements.in
+pytest-django==4.5.2
+    # via -r requirements.in
 python-dateutil==2.8.2
     # via botocore
 python-decouple==3.6
@@ -118,10 +180,16 @@ python3-openid==3.2.0
     # via social-auth-core
 requests==2.28.1
     # via
+    #   cachecontrol
+    #   codecov
     #   requests-oauthlib
     #   social-auth-core
 requests-oauthlib==1.3.1
     # via social-auth-core
+resolvelib==0.9.0
+    # via pip-audit
+rich==12.6.0
+    # via pip-audit
 s3transfer==0.6.0
     # via boto3
 scout-apm==2.26.1
@@ -131,17 +199,28 @@ sentry-sdk==1.9.5
 six==1.16.0
     # via
     #   asttokens
+    #   html5lib
     #   python-dateutil
 social-auth-app-django==5.0.0
     # via -r requirements.in
 social-auth-core==4.3.0
     # via social-auth-app-django
+sortedcontainers==2.4.0
+    # via cyclonedx-python-lib
 sqlparse==0.4.2
     # via
     #   django
     #   django-debug-toolbar
 stack-data==0.4.0
     # via ipython
+toml==0.10.2
+    # via
+    #   cyclonedx-python-lib
+    #   pip-audit
+tomli==2.0.1
+    # via
+    #   coverage
+    #   pytest
 traitlets==5.3.0
     # via
     #   ipython
@@ -158,8 +237,11 @@ urllib3-secure-extra==0.1.0
     # via urllib3
 wcwidth==0.2.5
     # via prompt-toolkit
+webencodings==0.5.1
+    # via html5lib
 wrapt==1.14.1
     # via scout-apm
 
 # The following packages are considered to be unsafe in a requirements file:
+# pip
 # setuptools

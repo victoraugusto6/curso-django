@@ -1,7 +1,6 @@
 import pytest
 from django.urls import reverse
 from model_mommy import mommy
-
 from pypro.aperitivos.models import Video
 from pypro.django_assertions import assert_contains
 
@@ -13,12 +12,14 @@ def video(db):
 
 @pytest.fixture
 def resp(client, video):
-    return client.get(reverse('aperitivos:video', args=(video.slug,)))
+    return client.get(reverse("aperitivos:video", args=(video.slug,)))
 
 
 @pytest.fixture
 def resp_video_nao_encontrado(client, video):
-    return client.get(reverse('aperitivos:video', args=(video.slug + 'video_nao_existente',)))
+    return client.get(
+        reverse("aperitivos:video", args=(video.slug + "video_nao_existente",))
+    )
 
 
 def test_status_code(resp):

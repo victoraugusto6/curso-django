@@ -1,9 +1,8 @@
 import pytest
 from django.urls import reverse
 from model_mommy import mommy
-
 from pypro.django_assertions import assert_contains
-from pypro.modulos.models import Modulo, Aula
+from pypro.modulos.models import Aula, Modulo
 
 
 @pytest.fixture
@@ -18,7 +17,7 @@ def aulas(modulo):
 
 @pytest.fixture
 def resp(client, modulo, aulas):
-    resp = client.get(reverse('modulos:detalhe', kwargs={'slug': modulo.slug}))
+    resp = client.get(reverse("modulos:detalhe", kwargs={"slug": modulo.slug}))
     return resp
 
 

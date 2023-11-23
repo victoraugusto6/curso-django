@@ -1,7 +1,6 @@
-from django.urls.base import reverse
 import pytest
+from django.urls.base import reverse
 from model_mommy import mommy
-
 from pypro.django_assertions import assert_contains
 from pypro.modulos.models import Modulo
 
@@ -13,7 +12,7 @@ def modulos(db):
 
 @pytest.fixture
 def resp(client, modulos):
-    resp = client.get(reverse('base:home'))
+    resp = client.get(reverse("base:home"))
     return resp
 
 

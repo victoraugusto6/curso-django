@@ -1,7 +1,6 @@
 import pytest
 from django.urls import reverse
 from model_mommy import mommy
-
 from pypro.aperitivos.models import Video
 from pypro.django_assertions import assert_contains
 
@@ -13,7 +12,7 @@ def videos(db):
 
 @pytest.fixture
 def resp(client, videos):
-    return client.get(reverse('aperitivos:indice'))
+    return client.get(reverse("aperitivos:indice"))
 
 
 def test_status_code(resp):
@@ -27,5 +26,5 @@ def test_titulo_video(resp, videos):
 
 def test_link_video(resp, videos):
     for video in videos:
-        video_link = reverse('aperitivos:video', args=(video.slug,))
+        video_link = reverse("aperitivos:video", args=(video.slug,))
         assert_contains(resp, f'href="{video_link}"')

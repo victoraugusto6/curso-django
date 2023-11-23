@@ -4,15 +4,14 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('modulos', '0007_vimeo_obrigatorio'),
+        ("modulos", "0007_vimeo_obrigatorio"),
     ]
 
     operations = [
         migrations.RenameField(
-            model_name='aula',
-            old_name='vimeo_id',
-            new_name='youtube_id',
+            model_name="aula",
+            old_name="vimeo_id",
+            new_name="youtube_id",
         ),
     ]

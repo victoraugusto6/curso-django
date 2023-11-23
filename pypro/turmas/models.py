@@ -7,7 +7,7 @@ class Turma(models.Model):
     slug = models.SlugField(max_length=64)
     inicio = models.DateField()
     fim = models.DateField()
-    alunos = models.ManyToManyField(get_user_model(), through='Matricula')
+    alunos = models.ManyToManyField(get_user_model(), through="Matricula")
 
     def __str__(self):
         return self.nome
@@ -19,8 +19,8 @@ class Matricula(models.Model):
     turma = models.ForeignKey(Turma, on_delete=models.CASCADE)
 
     class Meta:
-        unique_together = [['usuario', 'turma']]
-        ordering = ['turma', 'data']
+        unique_together = [["usuario", "turma"]]
+        ordering = ["turma", "data"]
 
     def __str__(self):
         return str(self.usuario.first_name)

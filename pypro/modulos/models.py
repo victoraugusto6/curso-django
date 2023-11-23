@@ -16,14 +16,14 @@ class Modulo(OrderedModel):
         return self.titulo
 
     def get_absolute_url(self):
-        return reverse('modulos:detalhe', kwargs={'slug': self.slug})
+        return reverse("modulos:detalhe", kwargs={"slug": self.slug})
 
 
 class Aula(OrderedModel):
     titulo = models.CharField(max_length=64)
     slug = models.SlugField(unique=True)
-    modulo = models.ForeignKey('Modulo', on_delete=models.PROTECT)
-    order_with_respect_to = 'modulo'
+    modulo = models.ForeignKey("Modulo", on_delete=models.PROTECT)
+    order_with_respect_to = "modulo"
     youtube_id = models.CharField(max_length=32)
 
     class Meta(OrderedModel.Meta):
@@ -33,4 +33,4 @@ class Aula(OrderedModel):
         return self.titulo
 
     def get_absolute_url(self):
-        return reverse('modulos:aula', kwargs={'slug': self.slug})
+        return reverse("modulos:aula", kwargs={"slug": self.slug})

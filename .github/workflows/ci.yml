@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Setup Python
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v4
         with:
           python-version: 3.11
           architecture: x64
@@ -37,10 +37,8 @@ jobs:
       - name: Instalar dependências
         run: |
           pip install -r requirements-dev.txt
-      - name: Rodar flake8
-        uses: py-actions/flake8@v1
-        with:
-          checkName: "flake8_py3"
+      - name: Flake8
+        uses: py-actions/flake8@v2
       - name: Rodar Testes Automáticos
         run: |
           pytest --cov=pypro
